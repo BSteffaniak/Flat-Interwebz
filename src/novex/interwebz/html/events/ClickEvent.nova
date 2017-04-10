@@ -1,0 +1,9 @@
+package "novex/interwebz/html/events"
+
+class ClickEvent extends ComponentEvent {
+    visible Int x, y
+    
+    public construct(this Int x, this Int y) {
+        
+    }
+}
