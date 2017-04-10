@@ -1,0 +1,5 @@
+class VerticalLayout extends ContentView {
+    public construct(vararg Component[] components) {
+        
+    }
+}
