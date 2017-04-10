@@ -1,0 +1,7 @@
+class Button extends Component {
+    public String text
+    
+    public construct(this String text) {
+        
+    }
+}
