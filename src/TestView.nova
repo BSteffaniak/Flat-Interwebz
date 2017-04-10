@@ -1,0 +1,14 @@
+class TestView extends HtmlView {
+    public construct() {
+        let button1 = new Button(text: "click me")
+        let label1 = new Label(text: "")
+        
+        button1.on(click: {
+            label1.text += "click "
+        }).on(mouseover: {
+            label1.text = label1.text.replace("c", "")
+        })
+        
+        content = new VerticalLayout(button1, label1)
+    }
+}
