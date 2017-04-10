@@ -1,0 +1,5 @@
+package "novex/interwebz/html/events"
+
+class ComponentEvent {
+    
+}
