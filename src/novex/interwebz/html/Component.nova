@@ -1,3 +1,36 @@
+package "novex/interwebz/html"
+
+import "novex/interwebz/html/events/ClickEvent"
+import "novex/interwebz/html/events/MouseoverEvent"
+
 class Component {
+    // external element
     
+    public on(click: action(ClickEvent)) {
+        var Int x = 0
+        var Int y = 0
+        
+        external js {
+            #{element}.addEventListener("click", function (e) {
+                #{x} = e.x;
+                #{y} = e.y;
+                
+                #{action(new ClickEvent(x, y))};
+            });
+        }
+    }
+    
+    public on(mouseover: action(MouseoverEvent)) {
+        var Int x = 0
+        var Int y = 0
+        
+        external js {
+            #{element}.addEventListener("mouseover", function (e) {
+                #{x} = e.x;
+                #{y} = e.y;
+                
+                #{action(new MouseoverEvent(x, y))};
+            });
+        }
+    }
 }
