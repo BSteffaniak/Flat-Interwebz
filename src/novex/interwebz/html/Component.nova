@@ -6,7 +6,7 @@ import "novex/interwebz/html/events/MouseoverEvent"
 class Component {
     // external element
     
-    public on(click: action(ClickEvent)) {
+    public on(named click(ClickEvent)) {
         var Int x = 0
         var Int y = 0
         
@@ -20,7 +20,7 @@ class Component {
         }
     }
     
-    public on(mouseover: action(MouseoverEvent)) {
+    public on(named mouseover(MouseoverEvent)) {
         var Int x = 0
         var Int y = 0
         
